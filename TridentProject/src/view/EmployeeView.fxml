@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tab.EmployeeViewController">
+   <children>
+      <TableView fx:id="Eemployeetableview" layoutX="45.0" layoutY="53.0" prefHeight="547.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
+         <columns>
+            <TableColumn fx:id="EemployeeIdCOL" prefWidth="75.0" text="EmployeeId" />
+            <TableColumn fx:id="EfirstnameCOL" prefWidth="75.0" text="FirstName" />
+            <TableColumn fx:id="ElastnameCOL" prefWidth="75.0" text="LastName" />
+            <TableColumn fx:id="EbadgenumberCOL" prefWidth="98.0" text="BadgeNumber" />
+            <TableColumn fx:id="EbirthdateCOL" prefWidth="102.0" text="BirthDate" />
+            <TableColumn fx:id="EstreetnumberCOL" prefWidth="85.0" text="StreetNumber" />
+            <TableColumn fx:id="EstreetnameCOL" prefWidth="105.0" text="StreetName" />
+            <TableColumn fx:id="EcityCOL" prefWidth="51.0" text="City" />
+            <TableColumn fx:id="EstateCOL" prefWidth="96.0" text="State" />
+            <TableColumn fx:id="EzipcodeCOL" prefWidth="117.0" text="ZIpCode" />
+            <TableColumn fx:id="EphonenumberCOL" minWidth="0.0" prefWidth="90.0" text="PhoneNumber" />
+            <TableColumn fx:id="EemailCOL" minWidth="0.0" prefWidth="64.0" text="Email" />
+         </columns>
+      </TableView>
+      <Button layoutX="636.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" style="-fx-background-radius: 10;" text="Refresh Search" />
+      <TextField fx:id="EfindTF" layoutX="442.0" layoutY="14.0" promptText="Keyword" />
+      <Button layoutX="591.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="45.0" style="-fx-background-radius: 10;" text="Find" />
+      <Button layoutX="5.0" layoutY="14.0" mnemonicParsing="false" onAction="#EReturnFullDatabase" prefHeight="25.0" prefWidth="156.0" style="-fx-background-radius: 10;" text="View All/Refresh Table" />
+   </children>
+</AnchorPane>

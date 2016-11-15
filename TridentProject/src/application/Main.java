@@ -14,6 +14,7 @@ public class Main extends Application {
 			Parent root = FXMLLoader.load(getClass().getResource("/view/Main.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			 primaryStage.setTitle("Red Ninja Database Project");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

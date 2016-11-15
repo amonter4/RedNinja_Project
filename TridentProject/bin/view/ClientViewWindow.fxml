@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tab.ClientViewController">
+   <children>
+      <TableView fx:id="ClientTableview" layoutX="45.0" layoutY="53.0" prefHeight="547.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
+        <columns>
+          <TableColumn fx:id="CcolumnclientID" prefWidth="75.0" text="Client ID" />
+          <TableColumn fx:id="Ccolumnname" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="Ccolumnemail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="Ccolumnphonenumber" prefWidth="98.0" text="Phone Number" />
+            <TableColumn fx:id="Ccolumnstreetnumber" prefWidth="102.0" text="Street Number" />
+            <TableColumn fx:id="Ccolumnstreetname" prefWidth="85.0" text="Street Name" />
+            <TableColumn fx:id="Ccolumnstate" prefWidth="53.0" text="State" />
+            <TableColumn fx:id="CColumncompanyname" prefWidth="103.0" text="Company Name" />
+            <TableColumn fx:id="Ccompanytype" prefWidth="96.0" text="Company Type" />
+            <TableColumn fx:id="Ccolumncontractlength" prefWidth="117.0" text="Contract Length" />
+            <TableColumn fx:id="Ccolumncontractname" minWidth="0.0" prefWidth="90.0" text="Contract Name" />
+            <TableColumn fx:id="Ccolumnzipcode" minWidth="0.0" prefWidth="64.0" text="Zip Code" />
+            <TableColumn fx:id="Ccolumncity" minWidth="2.0" prefWidth="65.0" text="City" />
+        </columns>
+      </TableView>
+      <Button fx:id="CrefreshBT" layoutX="636.0" layoutY="14.0" mnemonicParsing="false" onAction="#CRefreshBTClicked" prefHeight="25.0" prefWidth="98.0" style="-fx-background-radius: 10;" text="Refresh Search" />
+      <TextField fx:id="VfindTF" layoutX="442.0" layoutY="14.0" promptText="Keyword" />
+      <Button fx:id="VfindBT" layoutX="591.0" layoutY="14.0" mnemonicParsing="false" onAction="#VfindString" prefHeight="25.0" prefWidth="45.0" style="-fx-background-radius: 10;" text="Find" />
+      <Button layoutX="5.0" layoutY="14.0" mnemonicParsing="false" onAction="#VReturnFullDatabase" prefHeight="25.0" prefWidth="156.0" style="-fx-background-radius: 10;" text="View All/Refresh Table" />
+   </children>
+</AnchorPane>

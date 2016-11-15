@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="625.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tab.VacationController">
+   <children>
+      <Button layoutX="497.0" layoutY="40.0" mnemonicParsing="false" onAction="#SearchBTClicked" prefHeight="25.0" prefWidth="84.0" style="-fx-background-radius: 10;" text="Search" />
+      <VBox layoutX="31.0" layoutY="29.0" prefHeight="96.0" prefWidth="91.0" spacing="20.0">
+         <children>
+            <Button layoutX="45.0" layoutY="128.0" mnemonicParsing="false" onAction="#V1InsertBTClicked" prefHeight="25.0" prefWidth="91.0" style="-fx-background-radius: 10;" text="Insert" />
+            <Button layoutX="45.0" layoutY="161.0" mnemonicParsing="false" onAction="#V1DeleteBTClicked" prefHeight="25.0" prefWidth="91.0" style="-fx-background-radius: 10;" text="Delete" />
+            <Button layoutX="45.0" layoutY="197.0" mnemonicParsing="false" onAction="#V1UpdateBTClicked" prefHeight="25.0" prefWidth="91.0" style="-fx-background-radius: 10;" text="Update" />
+            <Button layoutX="45.0" layoutY="238.0" mnemonicParsing="false" onAction="#V1ClearBTClicked" prefHeight="25.0" prefWidth="91.0" style="-fx-background-radius: 10;" text="Clear" />
+         </children>
+      </VBox>
+      <GridPane layoutX="165.0" layoutY="29.0" prefHeight="202.0" prefWidth="301.0">
+         <children>
+            <TextField fx:id="V1employeeTF" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+            <Label text="Employee ID:" />
+            <Label text="Vacation Days:" GridPane.rowIndex="1" />
+            <Label text="Vac Start Date:" GridPane.rowIndex="2" />
+            <Label text="Vac End Date:" GridPane.rowIndex="3" />
+            <TextField fx:id="V1vacationdaysTF" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="V1startdate" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="V1enddateTF" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="107.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="364.0" minWidth="10.0" prefWidth="194.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="V1successLabel" layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="598.0" textFill="#12da44" />
+      <Label fx:id="V1errorLB" layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="598.0" textFill="#f20f0f" />
+   </children>
+   <effect>
+      <Blend mode="MULTIPLY" />
+   </effect>
+</AnchorPane>

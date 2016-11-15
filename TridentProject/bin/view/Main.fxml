@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <TabPane prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
-          <Tab closable="false" text="Search">
-               <content>
-                  <fx:include fx:id="searchtab" source="tab/SearchTab.fxml" />
-               </content></Tab>
             <Tab closable="false" text="Create Table">
                <content>
                   <fx:include fx:id="createtabletab" source="tab/CreateTableTab.fxml" />
+               </content></Tab>
+            <Tab closable="false" text="Employee">
+               <content>
+                  <fx:include fx:id="employeetab" source="tab/EmployeeTab.fxml" />
                </content></Tab>
           <Tab closable="false" text="Client">
                <content>
@@ -29,8 +30,26 @@
                <content>
                   <fx:include fx:id="shiftTab" source="tab/ShiftTab.fxml" />
                </content></Tab>
-            <Tab closable="false" text="Untitled Tab 2" />
+            <Tab closable="false" text="Daily Report">
+               <content>
+                  <fx:include fx:id="dailyreporttab" source="tab/DailyReportTab.fxml" />
+               </content></Tab>
+            <Tab closable="false" text="Incident Report">
+               <content>
+                  <fx:include fx:id="incidentreporttab" source="tab/IncidentReportTab.fxml" />
+               </content></Tab>
+            <Tab closable="false" text="Complaint Report">
+               <content>
+                  <fx:include fx:id="complaintreporttab" source="tab/ComplaintReportTab.fxml" />
+               </content></Tab>
+            <Tab closable="false" text="Time Reporting">
+               <content>
+                  <fx:include fx:id="timereportingtab" source="tab/TimeReportingTab.fxml" />
+               </content></Tab>
         </tabs>
       </TabPane>
    </children>
+   <effect>
+      <Blend mode="MULTIPLY" />
+   </effect>
 </AnchorPane>

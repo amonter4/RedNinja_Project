@@ -5,7 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
+//import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
 
@@ -18,7 +18,7 @@ public class SearchController {
 	@FXML private TextField SSearchTF;
 	
 	
-	@FXML private ChoiceBox  STableCB;
+	//@FXML private ChoiceBox  STableCB;
 	
 	@FXML private void SviewBTClicked(ActionEvent event){
 		

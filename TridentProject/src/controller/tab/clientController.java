@@ -2,16 +2,20 @@ package controller.tab;
 
 // All needed libraries 
 import javafx.event.ActionEvent;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+//import java.sql.SQLException;
 import java.sql.Statement;
 
 
@@ -24,7 +28,8 @@ public class clientController {
 	@FXML private Button CDeleteBT;
 	@FXML private Button CClearBT;
 	@FXML private Button CSearchBT;
-
+	@FXML private Button CtableviewBT;
+	
 	// Lets us use our TextFields from our client tab in GUI
 	@FXML private TextField CClientNumTF;
 	@FXML private TextField CPhoneNumTF;
@@ -52,6 +57,7 @@ public class clientController {
 	//Insert Client Information to database
 	@FXML private void CInsertBTClicked(ActionEvent event){
 		
+		//Clears the Message Labels 
 		MessageLB.setText("");
 		ErrorMessageLB1.setText("");
 		
@@ -140,7 +146,8 @@ public class clientController {
 			String sqlStatement = "UPDATE Client " +
                     "SET CompanyName = '" + companyName + "', Name = '" + name + "', Email = '" + email +  "', CompanyType = '" + companyType + "',"
                     + " ContractLength = " + contractTime +  ", StreetNumber = '" + streetNum + "', StreetName = '" + streetName + "',"
-                    + " City = '" + city + "', State = '" + state + "', ZipCode = '" + zipCode + "', PhoneNumber = '" + phoneNumber + "', ContactName = '" + contactName + "'   "  +
+                    + " City = '" + city + "', State = '" + state + "', ZipCode = '" + zipCode + "', PhoneNumber = '" + phoneNumber + "', "
+                    + "ContactName = '" + contactName + "'   "  +
                     "WHERE  ClientId = " + clientNum + " ";
 			 stmt.execute(sqlStatement);
 			
@@ -218,6 +225,7 @@ public class clientController {
 	}
 	//Search for Client information using their CClientNunTF
 	@FXML private void CSearchBTClicked(ActionEvent event){
+
 		
 		MessageLB.setText("");
 		ErrorMessageLB1.setText("");
@@ -270,5 +278,16 @@ public class clientController {
 			
 	}
 	
-	
+	@FXML private void CtableviewClicked(ActionEvent event) throws IOException{
+		
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ClientViewWindow.fxml"));
+		Parent root2 = (Parent) fxmlLoader.load();
+		Stage stage = new Stage();
+		stage.setTitle("View");
+		stage.setScene(new Scene(root2)); 
+		stage.show();
+		
+	}
 }
+	
+	
